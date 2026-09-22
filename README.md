@@ -1,4 +1,4 @@
-﻿# KN Cosméticos — Storefront E-commerce
+# KN Cosméticos — Storefront E-commerce
 
 Projeto do novo Storefront / E-commerce B2C da **KN Cosméticos**, operando de forma desacoplada do ERP legado.
 
