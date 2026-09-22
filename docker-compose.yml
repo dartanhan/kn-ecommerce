@@ -1,0 +1,32 @@
+﻿name: kn-storefront
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: kn-storefront-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+    networks:
+      - kn-storefront-network
+
+  nginx:
+    image: nginx:stable-alpine
+    container_name: kn-storefront-nginx
+    restart: unless-stopped
+    ports:
+      - "9010:80"
+    volumes:
+      - .:/var/www
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - kn-storefront-network
+    depends_on:
+      - app
+
+networks:
+  kn-storefront-network:
+    driver: bridge
