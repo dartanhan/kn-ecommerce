@@ -5,7 +5,82 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+:root {
+    --bg: #F7F3EE;
+    --surface: #FFFFFF;
+    --ink: #1C1412;
+    --muted: #6B5F5A;
+    --line: #E6DED6;
+    --primary: #7A1F3D;
+    --primary-hover: #5E1730;
+    --accent: #B0894D;
+    --success: #2F6B4F;
+    --danger: #A33B3B;
+    --focus: #7A1F3D;
+}
+
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+
+    --color-kn-bg: #F7F3EE;
+    --color-kn-surface: #FFFFFF;
+    --color-kn-ink: #1C1412;
+    --color-kn-muted: #6B5F5A;
+    --color-kn-line: #E6DED6;
+    --color-kn-primary: #7A1F3D;
+    --color-kn-primary-hover: #5E1730;
+    --color-kn-accent: #B0894D;
+    --color-kn-success: #2F6B4F;
+    --color-kn-danger: #A33B3B;
+
+    --radius-card: 8px;
+    --radius-btn: 8px;
+    --radius-input: 6px;
+    --radius-thumb: 4px;
+    --radius-badge: 4px;
+}
+
+/* Custom Base & Utilities */
+body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, .font-display {
+    font-family: var(--font-display);
+}
+
+.kn-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .kn-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .kn-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Card Shadow */
+.kn-card-shadow {
+    box-shadow: 0 1px 2px rgba(28, 20, 18, 0.06);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.kn-card-shadow:hover {
+    box-shadow: 0 8px 24px rgba(28, 20, 18, 0.08);
 }
