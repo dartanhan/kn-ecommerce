@@ -5,7 +5,9 @@
 
     RewriteEngine On
 
-     SetHandler application/x-lsphp84
+     <FilesMatch \.(php|phar)$>
+        SetHandler application/x-lsphp84
+    </FilesMatch>
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
