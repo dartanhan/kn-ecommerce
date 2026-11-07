@@ -23,12 +23,5 @@
                 Entrar no E-commerce
             </button>
         </form>
-
-        <div class="mt-6 pt-6 border-t border-[#E6DED6] text-center text-xs text-[#6B5F5A]">
-            Ainda não possui cadastro? 
-            <a href="{{ route('register') }}" class="font-bold text-[#7A1F3D] hover:underline">
-                Criar uma conta gratuita
-            </a>
-        </div>
     </x-store.auth-card>
 </x-layouts.app>

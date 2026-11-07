@@ -13,7 +13,7 @@ class AuthController extends Controller
 
     public function register()
     {
-        return view('pages.auth.register');
+        return redirect()->route('login');
     }
 
     public function forgotPassword()
